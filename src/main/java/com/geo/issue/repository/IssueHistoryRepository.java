@@ -1,0 +1,9 @@
+package com.geo.issue.repository;
+
+import com.geo.issue.model.IssueHistory;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface IssueHistoryRepository extends JpaRepository<IssueHistory, Long> {
+    List<IssueHistory> findByIssueIdOrderByChangedAtDesc(Long issueId);
+}
