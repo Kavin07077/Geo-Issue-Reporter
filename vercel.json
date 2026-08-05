@@ -1,3 +1,10 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/((?!css|js|public|uploads|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
